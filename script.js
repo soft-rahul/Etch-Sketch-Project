@@ -63,6 +63,18 @@ clearBtn.addEventListener('click',()=>{
 });
 
 
+// Eraser functionality added
+const EraserBtn = document.querySelector('.btn__eraser');
+EraserBtn.addEventListener('click',()=>{
+    const fullCanvas = document.querySelector('.canvas-container');
+    const cells = Array.from(fullCanvas.children);
+    cells.forEach(cell=>{
+        cell.addEventListener('mouseenter',e=>{
+            e.target.style.cssText = "background-color:#ffffff";
+        })
+    })
+});
+
 
 
 
