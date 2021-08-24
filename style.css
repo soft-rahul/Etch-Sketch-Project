@@ -67,30 +67,36 @@ legend {
   margin: 0;
   border: 0;
 }
+
 /* remember to define focus styles! */
 :focus {
   outline: 0;
 }
+
 body {
   background: white;
   line-height: 1;
   color: black;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 /* tables still need cellspacing="0" in the markup */
 table {
   border-collapse: separate;
   border-spacing: 0;
 }
+
 caption,
 th,
 td {
   font-weight: normal;
   text-align: left;
 }
+
 /* remove possible quote marks (") from <q> & <blockquote> */
 blockquote:before,
 blockquote:after,
@@ -98,9 +104,10 @@ q:before,
 q:after {
   content: "";
 }
+
 blockquote,
 q {
-  quotes: "" "";
+  quotes: """";
 }
 
 
@@ -108,44 +115,71 @@ q {
 
 /* !----- header -------! */
 
-body h1{
-  padding:.8rem 1rem;
 
-  color: cyan;
+.global__header{
+  padding: .8rem 1rem;
   background-color: black;
 
+}
+.global__header h1{
+
+  color: cyan;
+  text-transform: uppercase;
   font-size: 1.8rem;
   font-weight: bolder;
+}
+h1 span{
+  color:#fff;
+  text-transform: lowercase;
 }
 
 
 /* !----- Main Section of Page -------! */
 
 
+
+
+
+
 /* component of page */
 .global__main {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1.6fr;
   grid-template-rows: 1fr;
 }
 
 
-  /* responsive design  */
-  @media only screen and (max-width: 800px) {
-    .global__main {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(2,minmax(80vh,100vh));
-      grid-template-areas: "grid" "option";
-    }
-    .main__menu{
-      grid-area: option;
-    }
-    
-    .main__content{
-      grid-area:grid;
-    }
+/* responsive design  */
+@media only screen and (max-width: 800px) {
+
+  html {
+    font-size: 90%;
   }
+
+  .global__main {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, minmax(80vh, 100vh));
+    grid-template-areas: "grid""option";
+  }
+
+  .main__menu {
+    grid-area: option;
+  }
+
+  .main__content {
+    grid-area: grid;
+  }
+
+
+  /* button */
+  .option>button {
+    padding: .2rem 0.4rem;
+    font-size: .8rem;
+  }
+
+
+}
 
 
 /* left side options menu */
@@ -154,31 +188,35 @@ body h1{
   justify-content: center;
   align-items: center;
 }
+
 .options__container {
   width: 60%;
   display: flex;
   flex-flow: column;
   align-items: center;
 }
+
 .option {
   padding: 1rem 0.4rem;
   width: 40%;
 }
 
 /* global button */
-.global__btn{
-    width: 100%;
-    padding: .6rem .8rem;
-    background-color: cyan;
-    color: rgb(255 255 255);
-    border: none;
-    border-radius: .5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
+.global__btn {
+  width: 100%;
+  padding: .6rem .8rem;
+  background-color: cyan;
+  color: rgb(255 255 255);
+  border: none;
+  border-radius: .5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
 }
+
 .global__btn:hover,
-.global__btn:active{
+.global__btn:active,
+.active__btn {
   background-color: #000;
   transform: scale(1.2);
 }
@@ -204,17 +242,26 @@ input[type="range"] {
   margin: auto;
 }
 
+
+/* input hover styles */
+input[type]:hover,
+input[type]:active {
+  transform: scale(1.2);
+}
+
+
 .option--range {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
+
 .option--range div {
   padding: 0.4rem 0.2rem;
 }
 
-.option > button {
+.option>button {
   width: 100%;
   padding: 0.6rem 0.8rem;
 }
@@ -233,34 +280,36 @@ input[type="range"] {
   width: 90%;
   height: 90%;
   border: 2px solid black;
-  border-radius: 1rem;
+
 
   /* initial value */
   display: grid;
-  grid-template-columns: repeat(16,1fr);
-  grid-template-rows: repeat(16,1fr);
-  
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+
 }
 
 
 
 /* !----- footer of page -----------! */
 
-.global__footer{
-  margin-top:1rem;
-  padding:.5rem;
+.global__footer {
+  margin-top: 1rem;
+  padding: .5rem;
   background-color: black;
-  color:#fff;
+  color: #fff;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.global__footer a{
-  color:cyan;
+
+.global__footer a {
+  color: cyan;
   font-weight: bold;
   text-decoration: none;
 }
-.global__footer a:hover{
+
+.global__footer a:hover {
   text-decoration: underline;
 }

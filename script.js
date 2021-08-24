@@ -55,6 +55,7 @@ rangeEle.addEventListener('change', (e) => {
 
 const colorBtn = document.querySelector('.btn__colorfull');
 colorBtn.addEventListener('click', () => {
+    
     const fullCanvas = document.querySelector('.canvas-container');
     const cells = Array.from(fullCanvas.children);
     cells.forEach(cell => {
@@ -74,6 +75,7 @@ colorBtn.addEventListener('click', () => {
 // clear canvas functionality added
 const clearBtn = document.querySelector('.btn__clear');
 clearBtn.addEventListener('click', () => {
+   
     const fullCanvas = document.querySelector('.canvas-container');
     const cells = Array.from(fullCanvas.children);
     cells.forEach(cell => {
@@ -85,6 +87,7 @@ clearBtn.addEventListener('click', () => {
 // Eraser functionality added
 const EraserBtn = document.querySelector('.btn__eraser');
 EraserBtn.addEventListener('click', () => {
+    
     const fullCanvas = document.querySelector('.canvas-container');
     const cells = Array.from(fullCanvas.children);
     cells.forEach(cell => {
