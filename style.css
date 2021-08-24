@@ -125,7 +125,6 @@ body h1{
 /* component of page */
 .global__main {
   min-height: 100vh;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
@@ -166,6 +165,24 @@ body h1{
   width: 40%;
 }
 
+/* global button */
+.global__btn{
+    width: 100%;
+    padding: .6rem .8rem;
+    background-color: cyan;
+    color: rgb(255 255 255);
+    border: none;
+    border-radius: .5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.global__btn:hover,
+.global__btn:active{
+  background-color: #000;
+  transform: scale(1.2);
+}
+
 /* color picker */
 input[type="color"] {
   padding: none;
@@ -199,8 +216,10 @@ input[type="range"] {
 
 .option > button {
   width: 100%;
-  padding: 0.4rem 0.4rem;
+  padding: 0.6rem 0.8rem;
 }
+
+
 
 /* right side panel  */
 .main__content {
