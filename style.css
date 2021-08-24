@@ -104,7 +104,21 @@ q {
 }
 
 
-/* !---------------------------------------! */
+/* !------------------    Page style -----------------! */
+
+/* !----- header -------! */
+
+body h1{
+  padding:.8rem 1rem;
+  
+  color: cyan;
+  background-color: black;
+
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+
 
 
 
@@ -199,6 +213,7 @@ input[type="range"] {
   padding:.5rem;
   background-color: black;
   color:#fff;
+
   display: flex;
   justify-content: center;
   align-items: center;
