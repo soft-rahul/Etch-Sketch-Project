@@ -110,7 +110,7 @@ q {
 
 body h1{
   padding:.8rem 1rem;
-  
+
   color: cyan;
   background-color: black;
 
@@ -119,16 +119,35 @@ body h1{
 }
 
 
-
+/* !----- Main Section of Page -------! */
 
 
 /* component of page */
 .global__main {
-  min-height: 90vh;
+  min-height: 100vh;
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
 }
+
+
+  /* responsive design  */
+  @media only screen and (max-width: 800px) {
+    .global__main {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2,minmax(80vh,100vh));
+      grid-template-areas: "grid" "option";
+    }
+    .main__menu{
+      grid-area: option;
+    }
+    
+    .main__content{
+      grid-area:grid;
+    }
+  }
+
 
 /* left side options menu */
 .main__menu {
