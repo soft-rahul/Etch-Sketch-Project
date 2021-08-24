@@ -3,7 +3,7 @@ const color = document.querySelector('input[type="color"]')
 let colorValue = "#000000";
 color.addEventListener('change', (e) => {
     colorValue = e.target.value;
-})
+});
 
 
 // Dyanamic Grid
@@ -28,6 +28,7 @@ rangeEle.addEventListener('change', (e) => {
     // defining grid size
     mainEle.style.cssText = `grid-template-columns:repeat(${gridSize},1fr); grid-template-rows:repeat(${gridSize},1fr)`;
 
+    //!       <!----- Lots of Trouble ------>
     // removal of old elements from grid
     const childOfMain = Array.from(mainEle.children);
     childOfMain.forEach(child => {
