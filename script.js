@@ -52,6 +52,27 @@ rangeEle.addEventListener('change', (e) => {
 });
 
 
+
+// color cells functionality added (default)
+
+const colorBtn = document.querySelector('.btn__colorfull');
+colorBtn.addEventListener('click', () => {
+    const fullCanvas = document.querySelector('.canvas-container');
+    const cells = Array.from(fullCanvas.children);
+    cells.forEach(cell => {
+        cell.addEventListener('mouseenter',e=>{
+            e.target.style.cssText = `background-color:${colorValue}`;
+        })
+    });
+});
+
+
+
+
+
+
+
+
 // clear canvas functionality added
 const clearBtn = document.querySelector('.btn__clear');
 clearBtn.addEventListener('click', () => {
