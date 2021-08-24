@@ -1,5 +1,3 @@
-
-
 // color picker done!
 
 const color = document.querySelector('input[type="color"]')
@@ -60,7 +58,7 @@ colorBtn.addEventListener('click', () => {
     const fullCanvas = document.querySelector('.canvas-container');
     const cells = Array.from(fullCanvas.children);
     cells.forEach(cell => {
-        cell.addEventListener('mouseenter',e=>{
+        cell.addEventListener('mouseenter', e => {
             e.target.style.cssText = `background-color:${colorValue}`;
         })
     });
@@ -119,7 +117,7 @@ rainbowBtn.addEventListener('click', () => {
 
 
             e.target.style.cssText = `background-color:#${rCode1}${rCode2}${rCode3}${rCode4}${rCode5}${rCode6}`;
-            
+
         })
     });
 
@@ -147,4 +145,3 @@ function InitialMode() {
 }
 
 window.addEventListener('load', InitialMode);
-

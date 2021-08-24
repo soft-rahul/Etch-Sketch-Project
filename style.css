@@ -104,50 +104,49 @@ q {
 }
 
 
+/* !---------------------------------------! */
+
+
+
 /* component of page */
-.global__main{
+.global__main {
   min-height: 90vh;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
 }
 
 /* left side options menu */
-.main__menu{
+.main__menu {
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
-.options__container{
- 
+.options__container {
   width: 60%;
   display: flex;
   flex-flow: column;
   align-items: center;
 }
-.option{
-  padding:1rem .4rem;
-  width:40%;
-  
+.option {
+  padding: 1rem 0.4rem;
+  width: 40%;
 }
 
 /* color picker */
-input[type="color"]{
+input[type="color"] {
   padding: none;
   padding: 0;
   background: none;
   border-style: none;
   border: none;
 
-    display: block;
-    margin:auto;
-    height: 6rem;
-    width: 6rem;
-    cursor: pointer;
+  display: block;
+  margin: auto;
+  height: 6rem;
+  width: 6rem;
+  cursor: pointer;
 }
-
-
 
 /* Range slider */
 input[type="range"] {
@@ -155,18 +154,60 @@ input[type="range"] {
   margin: auto;
 }
 
-.option--range{
+.option--range {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
-  .option--range div{
-    padding:.4rem .2rem;
-  }
-
-.option > button{
-    width:100%;
-    padding:.4rem .4rem;
+.option--range div {
+  padding: 0.4rem 0.2rem;
 }
 
+.option > button {
+  width: 100%;
+  padding: 0.4rem 0.4rem;
+}
+
+/* right side panel  */
+.main__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dyanamic Canvas */
+.canvas-container {
+  width: 90%;
+  height: 90%;
+  border: 2px solid black;
+  border-radius: 1rem;
+
+  /* initial value */
+  display: grid;
+  grid-template-columns: repeat(16,1fr);
+  grid-template-rows: repeat(16,1fr);
+  
+}
+
+
+
+/* !----- footer of page -----------! */
+
+.global__footer{
+  margin-top:1rem;
+  padding:.5rem;
+  background-color: black;
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.global__footer a{
+  color:cyan;
+  font-weight: bold;
+  text-decoration: none;
+}
+.global__footer a:hover{
+  text-decoration: underline;
+}

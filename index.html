@@ -15,30 +15,33 @@
         <section class="main__menu">
             <div class="options__container">
                 <div class="option option--color">
-                    <input type="color" name="color-picker" id="">
+                    <input type="color" name="color-picker" value="#000000">
                 </div>
                 <div class="option option--range">
                     <div class="text">
                         <span class="rangeValue">
-                            1
+                           16
                         </span>
                         <span>X</span>
                         <span class="rangeValue">
-                            1
+                           16
                         </span>
                     </div>
                     <div class="range">
-                        <input type="range" name="grid-size" id="" min="1" max="64">
+                        <input type="range" value="16" step="1" min="1" max="100">
                     </div>
                 </div>
+                <div class="option colorfull">
+                    <button class="global__btn btn__colorfull">Color Mode</button>
+                </div>
                 <div class="option option--randomColor">
-                    <button class="global__btn">Raindow Mode</button>
+                    <button class="global__btn btn__rainbow">Rainbow Mode</button>
                 </div>
                 <div class="option option--eraser">
-                    <button class="global__btn">Eraser</button>
+                    <button class="global__btn btn__eraser">Eraser</button>
                 </div>
                 <div class="option option--clear">
-                    <button class="global__btn">Clear</button>
+                    <button class="global__btn btn__clear">Clear</button>
                 </div>
             </div>
         </section>
