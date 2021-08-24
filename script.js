@@ -1,5 +1,4 @@
 // color picker done!
-
 const color = document.querySelector('input[type="color"]')
 let colorValue = "#000000";
 color.addEventListener('change', (e) => {
