@@ -54,10 +54,10 @@ rangeEle.addEventListener('change', (e) => {
 
 // clear canvas functionality added
 const clearBtn = document.querySelector('.btn__clear');
-clearBtn.addEventListener('click',()=>{
+clearBtn.addEventListener('click', () => {
     const fullCanvas = document.querySelector('.canvas-container');
-    const cells =  Array.from(fullCanvas.children);
-    cells.forEach(cell=>{
+    const cells = Array.from(fullCanvas.children);
+    cells.forEach(cell => {
         cell.style.cssText = "background-color:#ffffff";
     });
 });
@@ -65,16 +65,44 @@ clearBtn.addEventListener('click',()=>{
 
 // Eraser functionality added
 const EraserBtn = document.querySelector('.btn__eraser');
-EraserBtn.addEventListener('click',()=>{
+EraserBtn.addEventListener('click', () => {
     const fullCanvas = document.querySelector('.canvas-container');
     const cells = Array.from(fullCanvas.children);
-    cells.forEach(cell=>{
-        cell.addEventListener('mouseenter',e=>{
+    cells.forEach(cell => {
+        cell.addEventListener('mouseenter', e => {
             e.target.style.cssText = "background-color:#ffffff";
         })
     })
 });
 
+
+
+// random color cell functionality added
+
+const rainbowBtn = document.querySelector('.btn__rainbow');
+rainbowBtn.addEventListener('click', () => {
+
+    const randomHexCode = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f'];
+
+    const fullCanvas = document.querySelector('.canvas-container');
+    const cells = Array.from(fullCanvas.children);
+    cells.forEach(cell => {
+        cell.addEventListener('mouseenter', e => {
+            let rCode1 = randomHexCode[Math.floor(Math.random() * randomHexCode.length)];
+            let rCode2 = randomHexCode[Math.floor(Math.random() * randomHexCode.length)];
+            let rCode3 = randomHexCode[Math.floor(Math.random() * randomHexCode.length)];
+            let rCode4 = randomHexCode[Math.floor(Math.random() * randomHexCode.length)];
+            let rCode5 = randomHexCode[Math.floor(Math.random() * randomHexCode.length)];
+            let rCode6 = randomHexCode[Math.floor(Math.random() * randomHexCode.length)];
+
+
+
+            e.target.style.cssText = `background-color:#${rCode1}${rCode2}${rCode3}${rCode4}${rCode5}${rCode6}`;
+            
+        })
+    });
+
+});
 
 
 
